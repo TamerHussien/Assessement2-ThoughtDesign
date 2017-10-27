@@ -1,0 +1,24 @@
+<div>
+    <mat-toolbar color="primary">
+        welcome
+    </mat-toolbar>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav class="example-sidenav" mode="side" align="start" opened>
+            <span>Please Choose Your School</span><br>
+            <button class="button-width" mat-raised-button [matMenuTriggerFor]="schools">List of Schools</button>
+            <mat-menu #schools="matMenu">
+                <!-- <button mat-menu-item *ngFor="let name of names" [routerLink]="['/schooldetail',name.id]">
+                        {{name.name}}
+                    </button> -->
+                <button mat-menu-item>
+                        EBS
+                    </button>
+                <button mat-menu-item>
+                        MLS
+                    </button>
+            </mat-menu>
+        </mat-sidenav>
+        <!-- Body -->
+
+    </mat-sidenav-container>
+</div>

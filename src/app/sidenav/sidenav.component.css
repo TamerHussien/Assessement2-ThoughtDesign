@@ -1,0 +1,12 @@
+mat-sidenav-container {
+    height: 300px;
+    border: 1px solid black;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+.button-width {
+    min-width: 200px;
+}
