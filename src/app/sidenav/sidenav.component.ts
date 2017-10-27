@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { School } from '../shared/school';
+import { School } from '../shared/school';
 
-// import { SCHOOLS } from '../shared/schools';
 
-// import { DepserviceService } from '../services/depservice.service';
+
+ import { SCHOOLS } from '../shared/schools';
+
+import { GetinfoService } from '../services/getinfo.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -13,17 +15,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  // schools = SCHOOLS;
-  // names: School[];
+  schools = SCHOOLS;
+  names: School[];
 
-  constructor(/*private department: DepserviceService*/) { }
+  constructor(private info: GetinfoService) { }
 
   ngOnInit() {
 
-    // this.department.getSchools()
-    // .subscribe(schools => this.schools = schools);
-    // this.names = this.schools;
-
+    this.info.getSchools()
+     .subscribe(schools => this.schools = schools);
+     this.names = this.schools;
   }
 
 }

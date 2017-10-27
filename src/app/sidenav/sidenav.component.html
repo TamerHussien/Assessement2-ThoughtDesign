@@ -7,15 +7,17 @@
             <span>Please Choose Your School</span><br>
             <button class="button-width" mat-raised-button [matMenuTriggerFor]="schools">List of Schools</button>
             <mat-menu #schools="matMenu">
-                <!-- <button mat-menu-item *ngFor="let name of names" [routerLink]="['/schooldetail',name.id]">
-                        {{name.name}}
-                    </button> -->
-                <button mat-menu-item>
+                <button mat-menu-item *ngFor="let name of names" [routerLink]="['/schooldetail',name.id]">
+                <!-- <button mat-menu-item *ngFor="let name of names">    -->
+                    {{name.name}}
+                    </button>
+
+                <!-- <button mat-menu-item>
                         EBS
                     </button>
                 <button mat-menu-item>
                         MLS
-                    </button>
+                    </button> -->
             </mat-menu>
         </mat-sidenav>
         <!-- Body -->

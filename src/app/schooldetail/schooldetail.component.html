@@ -1,3 +1,7 @@
-<p>
-  schooldetail works!
-</p>
+<div>
+    <mat-list *ngIf="school">
+        <mat-list-item *ngFor="let foo of school.depts">
+            {{foo.depName}}
+        </mat-list-item>
+    </mat-list>
+</div>
