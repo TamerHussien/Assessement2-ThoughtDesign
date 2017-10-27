@@ -11,12 +11,15 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import 'hammerjs';
+import { SchooldetailComponent } from './schooldetail/schooldetail.component';
+import { GetinfoService } from '../app/services/getinfo.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    SchooldetailComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import 'hammerjs';
     MatSlideToggleModule, MatToolbarModule, MatListModule, MatGridListModule,
     MatCardModule, MatIconModule, MatMenuModule , MatProgressSpinnerModule, MatDialogModule, BrowserAnimationsModule, HttpModule
   ],
-  providers: [],
+  providers: [GetinfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
