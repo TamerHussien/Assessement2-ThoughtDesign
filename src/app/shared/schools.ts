@@ -6,9 +6,7 @@ export const SCHOOLS: School[] = [
         name : 'ALS',
         depts : [
             { depName: 'science'},
-            { depName: 'Math'},
-            { depName: 'Art'},
-            { depName: 'Programming'},
+            { depName: 'Math'}
         ]
     },
     {
@@ -16,9 +14,7 @@ export const SCHOOLS: School[] = [
         name : 'EBS',
         depts : [
             { depName: 'science'},
-            { depName: 'Math'},
-            { depName: 'Art'},
-            { depName: 'Programming'},
+            { depName: 'Math'}
         ]
     },
     {
@@ -27,8 +23,6 @@ export const SCHOOLS: School[] = [
         depts : [
             { depName: 'science'},
             { depName: 'Math'},
-            { depName: 'Art'},
-            { depName: 'Programming'},
         ]
     }
 

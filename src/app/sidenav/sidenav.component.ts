@@ -15,7 +15,7 @@ import { GetinfoService } from '../services/getinfo.service';
 })
 export class SidenavComponent implements OnInit {
 
-  schools = SCHOOLS;
+  schools: School[];
   names: School[];
 
   constructor(private info: GetinfoService) { }

@@ -1,7 +1,7 @@
 <div>
     <mat-list *ngIf="school">
-        <mat-list-item *ngFor="let foo of school.depts">
-            {{foo.depName}}
+        <mat-list-item *ngFor="let foo of school.depts" [routerLink]="[foo.depName]">
+            <button mat-button>{{foo.depName}}</button>
         </mat-list-item>
     </mat-list>
 </div>

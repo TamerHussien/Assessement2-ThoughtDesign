@@ -4,6 +4,7 @@ import {MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldMod
   MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule, MatToolbarModule, MatListModule, MatGridListModule,
   MatCardModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule, MatMenuModule } from '@angular/material';
+  import {FormsModule, ReactiveFormsModule } from '@angular/forms';
   import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   import { FlexLayoutModule } from '@angular/flex-layout';
   import { HttpModule } from '@angular/http';
@@ -14,7 +15,9 @@ import 'hammerjs';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { SchooldetailComponent } from './schooldetail/schooldetail.component';
 import { GetinfoService } from '../app/services/getinfo.service';
-import { HomeComponent } from './home/home.component';
+
+import { ScienceComponent } from './science/science.component';
+import { QuizformComponent } from './quizform/quizform.component';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SidenavComponent,
     SchooldetailComponent,
-    HomeComponent
+    ScienceComponent,
+    QuizformComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { HomeComponent } from './home/home.component';
     MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
     MatSlideToggleModule, MatToolbarModule, MatListModule, MatGridListModule,
     MatCardModule, MatIconModule, MatMenuModule , MatProgressSpinnerModule, MatDialogModule, BrowserAnimationsModule,
-     HttpModule, AppRoutingModule
+     HttpModule, AppRoutingModule, FormsModule, ReactiveFormsModule
   ],
   providers: [GetinfoService],
   bootstrap: [AppComponent]

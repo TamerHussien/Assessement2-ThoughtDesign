@@ -1,0 +1,46 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+    <form novalidate (ngSubmit)="onSubmit(form.value)" [formGroup]="form">
+        <div *ngFor="let prop of questProp">
+            <label [attr.for]="prop">{{prop.label}}</label>
+
+            <div [ngSwitch]="prop.type">
+                <div>
+                    <input *ngSwitchCase="'text'" [formControlName]="prop.key" [id]="prop.key" [type]="prop.type">
+                </div>
+                <div *ngSwitchCase="'radio'">
+                    <label *ngFor="let option of prop.options">
+                <input
+                  type="radio"
+                  [name]="prop.key"
+                  [formControlName]="prop.key"
+                  [value]="option.value"> {{option.label}}
+              </label>
+                </div>
+
+                <mat-form-field *ngSwitchCase="'select'">
+                    <mat-select [formControlName]="prop.key">
+                        <mat-option *ngFor="let option of prop.options" [value]="option.value">
+                            {{ option.label }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+                <div class="error" *ngIf="form.get(prop.key).invalid && (form.get(prop.key).dirty || form.get(prop.key).touched)">
+                    <div *ngIf="form.get(prop.key).errors.required">
+                        {{ prop.label }} is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            <button mat-raised-button [disabled]="form.invalid" type="submit">Save</button>
+        </p>
+
+    </form>
+    <hr />
+    <strong>Form Value</strong>
+    <pre>{{ form.value | json }}</pre>
+    <strong>Form is valid:</strong> {{form.valid}}
+</div>

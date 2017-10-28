@@ -1,0 +1,9 @@
+<div>
+    <mat-form-field>
+        <mat-select placeholder="Select Your Quiz">
+            <mat-option *ngFor="let quiz of selectItems" [value]="quiz.quizName" [routerLink]="[quiz.quizName]">
+                {{ quiz.quizName }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
