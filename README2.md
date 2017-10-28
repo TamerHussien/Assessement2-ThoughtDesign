@@ -2,7 +2,7 @@
 
 1* Ui and Ux need more enhancement.
 
-2* should coreect the path when choose Math Exam to be selected.(Although i did a condition into component but it still get only SCI exam).
+2* should corect the path when choose Math Exam to be selected.(Although i did a condition into component but it still get only SCI exam).
 
 3* i didn't figure out how to apply Dependent Upon Field and Dependent field.
 
